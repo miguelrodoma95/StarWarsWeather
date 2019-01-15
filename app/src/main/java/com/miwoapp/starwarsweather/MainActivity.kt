@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         var addresses: ArrayList<Address> = geocoder.getFromLocation(latitude, longitude, 1) as ArrayList<Address>
 
         if(addresses.size > 0){
-            val city = addresses.get(0)
+            val city = addresses.get(0).locality.toString()
             city
         }
     }
